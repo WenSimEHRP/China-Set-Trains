@@ -63,7 +63,7 @@ BUNDLE_FILES           ?= $(GRF_FILE) $(DOC_FILES)
 # (unless you know where to add them in other places, too)
 REPLACE_TITLE       := {{GRF_TITLE}}
 REPLACE_GRFID       := {{GRF_ID}}
-REPLACE_REVISION    := {{REPO_REVISION}}
+REPLACE_REVISION    := $(shell echo $$((`date +%s` / (24*60*60/4))))
 REPLACE_FILENAME    := {{FILENAME}}
 
 GENERATE_GRF  ?= grf
